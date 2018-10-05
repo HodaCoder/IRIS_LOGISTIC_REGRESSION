@@ -39,13 +39,14 @@ arrow_prop_dict = dict(mutation_scale=20, arrowstyle='-|>', color='k', shrinkA=0
 
 for item in wrong_prediction_lr_indexes.T:
     # print(item)
-    ax.text3D(x[:, 0].mean() + np.argmax(y[item]),
-              x[:, 1].mean() + 1.5 - np.argmax(y[item]),
-              x[:, 2].mean(), 'Ground Truth: '+iris_data_set.target_names[np.argmax(y[item])],
+    y_item=y[item][0][0]
+    ax.text3D(x[:, 0].mean() + y_item,
+              x[:, 1].mean() + 1.5 - y_item,
+              x[:, 2].mean(), 'Ground Truth: '+iris_data_set.target_names[y_item],
               horizontalalignment='center',
               bbox=dict(alpha=.5, edgecolor='w', facecolor='w'))
-    a = Arrow3D([x[:, 0].mean()+ np.argmax(y[item]), x[item, 0].mean()],
-                [x[:, 1].mean()+ 1.5 -np.argmax(y[item]) , x[item, 1].mean()],
+    a = Arrow3D([x[:, 0].mean()+ y_item, x[item, 0].mean()],
+                [x[:, 1].mean()+ 1.5 - y_item , x[item, 1].mean()],
                 [x[:, 2].mean(), x[item, 2].mean()], **arrow_prop_dict)
     ax.add_artist(a)
 
