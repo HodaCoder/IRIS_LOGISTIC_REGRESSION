@@ -1,12 +1,12 @@
-# IRIS classification using Keras
+# IRIS classification using Logistic Regression
 
-This is a Machine Learning project using Neural Network to predict/classify the Iris data set. 
+This is a Machine Learning project using Logistic Regression to predict/classify the Iris data set. 
 
 ## Getting Started
 
-Use with Python 3.6 and Keras.
+Use with Python 3.6 and sklearn.
 
-![alt text](https://github.com/HodaCoder/IRIS_NN_Classification_using_Keras/blob/master/IRIS_NN.gif)
+![alt text](https://github.com/HodaCoder/IRIS_LOGISTIC_REGRESSION/blob/master/IRIS_LR.gif)
 
 ## Authors
 
